@@ -695,3 +695,136 @@ body{
         gap:50px;
     }
 }
+
+.vcase-block{
+    background:var(--bg);
+    padding:90px 0 120px;
+}
+
+.vcase-header-bg{
+    width:100%;
+    background:rgba(0,0,0,0.06);
+    padding:34px 0 32px;
+}
+
+.vcase-header{
+    max-width:1200px;
+    margin:0 auto 16px;
+    padding:0 10%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.vcase-title{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:54px;
+    font-weight:400;
+    color:var(--wine);
+    margin:0;
+}
+
+.vcase-badges{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.vcase-badge{
+    font-family:"Jost", sans-serif;
+    font-size:14px;
+    padding:6px 14px;
+    border-radius:999px;
+    border:1px solid var(--wine);
+    color:var(--wine);
+    background:transparent;
+    line-height:1;
+}
+
+.vcase-badge--filled{
+    background:var(--wine);
+    color:var(--bg);
+}
+
+.vcase-intro{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 10%;
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    text-align:center;
+    color:#1f1f1f;
+}
+
+.vcase-visuals{
+    max-width:1200px;
+    margin:60px auto 90px;
+    padding:0 10%;
+    display:flex;
+    justify-content:center;
+}
+
+.vcase-image{
+    width:100%;
+    max-width:1100px;
+    height:auto;
+    display:block;
+}
+
+.vcase-content{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 10%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px 140px;
+    align-items:start;
+}
+
+.vcase-column{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.vcase-subtitle{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:32px;
+    font-weight:400;
+    color:var(--wine);
+    margin:0;
+}
+
+.vcase-text{
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    color:#1f1f1f;
+    margin:0;
+}
+
+.vcase-tools{
+    display:flex;
+    gap:26px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.vcase-tools img{
+    width:120px;
+    height:auto;
+    display:block;
+}
+
+@media (max-width: 900px){
+    .vcase-content{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+}
