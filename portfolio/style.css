@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Monsieur+La+Doulaise&display=swap');
+@import url(https://db.onlinewebfonts.com/c/acbb93c93a5f7b570775a8cb6c604b23?family=Bavex);
+@font-face {
+    font-family: "Bavex";
+    src: url("https://db.onlinewebfonts.com/t/acbb93c93a5f7b570775a8cb6c604b23.eot");
+    src: url("https://db.onlinewebfonts.com/t/acbb93c93a5f7b570775a8cb6c604b23.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/acbb93c93a5f7b570775a8cb6c604b23.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/acbb93c93a5f7b570775a8cb6c604b23.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/acbb93c93a5f7b570775a8cb6c604b23.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/acbb93c93a5f7b570775a8cb6c604b23.svg#Bavex")format("svg");
+}
+
+:root{
+    --bg:#f6efe6;
+    --wine:#7b0d0d;
+    --bar:78px;
+    --line:1px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background:#f6efe6;
+    color:#7b0d0d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.topbar{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:var(--bar);
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    border-top:var(--line) solid var(--wine);
+    border-bottom:var(--line) solid var(--wine);
+    background:var(--bg);
+    z-index:50;
+}
+
+.toplink{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:"Jost",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+    font-size:26px;
+    font-weight:400;
+    color:var(--wine);
+    text-decoration:none;
+}
+
+.toplink:nth-child(1),
+.toplink:nth-child(2){
+    border-right:var(--line) solid var(--wine);
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+    padding-top:var(--bar);
+    padding-bottom:var(--bar);
+}
+
+.hero-inner{
+    position:relative;
+    height:calc(100vh - (var(--bar) * 2));
+    width:100%;
+}
+
+.name{
+    position:absolute;
+    left:18%;
+    top:34%;
+    transform:translate(-50%,-50%);
+    font-family:"Monsieur La Doulaise", cursive;
+    font-size:72px;
+    line-height:1;
+    font-weight:400;
+    color:#1f1f1f;
+    z-index:30;
+    pointer-events:none;
+    white-space:nowrap;
+}
+
+.title-layer{
+    position:absolute;
+    inset:0;
+}
+
+.portfolio{
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-family:"Bavex","Times New Roman",serif;
+    font-weight:400;
+    font-size:280px;
+    line-height:0.9;
+    color:var(--wine);
+    letter-spacing:0.08em;
+    white-space:nowrap;
+}
+
+
+.marquee{
+
+    left:0;bottom:0;
+    width:100%;
+    height:var(--bar);
+    border-top:var(--line) solid var(--wine);
+    border-bottom:var(--line) solid var(--wine);
+    background:var(--bg);
+    z-index:50;
+}
+
+.marquee-track{
+    height:100%;
+    display:inline-flex;
+    align-items:center;
+    gap:90px;
+    padding-left:40px;
+    font-family:"Jost",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+    font-size:22px;
+    font-weight:400;
+    color:var(--wine);
+    white-space:nowrap;
+    animation:scroll 18s linear infinite;
+}
+
+@keyframes scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+.about{
+    position:relative;
+    background:#f6efe6;
+    padding:140px 0 160px;
+    color:#7b0d0d;
+    font-family:"Jost", sans-serif;
+}
+
+.about-wrapper{
+    position:relative;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:120px;
+}
+
+.about-bg-text{
+    position:absolute;
+    top:42%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-family:"Monsieur La Doulaise", cursive;
+    font-size:260px;
+    color:#bfb7ad;
+    opacity:0.55;
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:1;
+}
+
+.about-photo{
+    position:relative;
+    width:220px;
+    z-index:2;
+}
+
+.about-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:140px;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 10%;
+    align-items:start;
+}
+
+.about{
+    padding-top:100px !important;
+    padding-bottom:120px !important;
+    min-height:auto !important;
+}
+
+.about-wrapper{
+    margin-bottom:40px !important;
+}
+
+.about-columns{
+    margin-top:40px !important;
+}
+
+.marquee{
+    position:sticky !important;
+    bottom:0 !important;
+}
+
+.hero{
+    height:auto !important;
+    min-height:100vh !important;
+    padding-bottom:0 !important;
+}
+.about-text,
+.about-info{
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+}
+
+.hello{
+    font-family:"Monsieur La Doulaise", cursive;
+    font-size:34px;
+    font-weight:400;
+    color:#7b0d0d;
+    margin-bottom:6px;
+}
+
+.about h3,
+.about-info h3{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:32px;
+    margin-bottom:14px;
+    text-align:left;
+}
+
+.about p{
+    font-family:"Jost", sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    margin:0 0 24px;
+}
+
+.skills{
+    margin-top:120px;
+    display:flex;
+    justify-content:center;
+}
+
+.skills img{
+    width:360px;
+}
+body{
+    font-family:"Jost", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Bavex","Times New Roman",serif;
+    font-weight:400;
+}
+
+
+.hello{
+    font-family:"Monsieur La Doulaise", cursive;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+
+.about p,
+.about-info p{
+    font-family:"Jost", sans-serif;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.about h3,
+.about-info h3{
+    font-family:"Bavex","Times New Roman",serif;
+    margin-bottom:14px;
+}
+
+.why-title{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:32px !important;
+    margin:0 0 14px;
+    font-weight:400;
+}
+
+.skills-block{
+    display:flex;
+    justify-content:space-between;
+    max-width:1200px;
+    margin:0 auto 140px;
+    padding:0 10%;
+    margin-top:80px;
+}
+
+.skills-col{
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+    align-items:flex-start;
+    text-align:left;
+}
+
+.skills-col h3{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.why-title{
+    text-align:left;
+    margin-top:40px;
+}
+
+.why-text{
+    max-width:none;
+    margin:0;
+}
+
+.skills-img{
+    width:300px;
+    max-width:100%;
+    height:auto;
+    margin-top:20px;
+}
+
+.personal-list{
+    margin-left:0;
+    padding-left:18px;
+}
+
+html, body{
+    height:auto !important;
+    overflow-y:auto !important;
+}
+
+body{
+    overflow-x:hidden !important;
+}
+
+.hero{
+    height:100vh;
+}
+
+.about{
+    min-height:100vh;
+}
+
+.about-text{
+    text-align:left;
+}
+
+.why-title2{
+    text-align:center;
+    font-size:32px;
+    margin:0 0 14px;
+    font-weight:400;
+}
+
+.why-text2{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto;
+}
+
+
+.works-divider{
+    position:relative;
+    width:100%;
+    padding:160px 0;
+    background:var(--bg);
+    overflow:hidden;
+}
+
+.works-line{
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:8px;
+    background:#d6cec4;
+    transform:translateY(-50%);
+    z-index:1;
+}
+
+.works-title{
+    position:relative;
+    font-family:"Monsieur La Doulaise", cursive;
+    font-size:64px;
+    font-weight:400;
+    color:#1f1f1f;
+    text-align:center;
+    z-index:2;
+    margin:0;
+}
+
+.angel{
+    position:absolute;
+    top:50%;
+    width:200px;
+    height:auto;
+    transform:translateY(-50%);
+    z-index:2;
+}
+
+.angel-left{
+    left:0;
+}
+
+.angel-right{
+    right:0;
+    transform:translateY(-50%) scaleX(-1);
+}
+
+.project{
+    background:var(--bg);
+    padding:110px 0;
+}
+
+.project-top{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:18px;
+}
+
+.project-title{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:54px;
+    font-weight:400;
+    color:var(--wine);
+    margin:0;
+}
+
+.project-tags{
+    display:flex;
+    gap:10px;
+}
+
+.project-tag{
+    font-family:"Jost", sans-serif;
+    font-size:14px;
+    padding:6px 14px;
+    border-radius:999px;
+    border:1px solid var(--wine);
+    color:var(--wine);
+    background:transparent;
+    line-height:1;
+}
+
+.project-tag.is-solid{
+    background:var(--wine);
+    color:var(--bg);
+}
+
+.project-desc{
+    max-width:720px;
+    margin:0 auto 46px;
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    text-align:center;
+    color:#1f1f1f;
+}
+
+.project-media{
+    display:flex;
+    justify-content:center;
+    margin:0 auto 70px;
+    padding:0 10%;
+}
+
+.project-img{
+    width:80%;
+    max-width:900px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}
+
+.project-grid{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 10%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px 140px;
+    align-items:start;
+}
+
+.project-h3{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:32px;
+    font-weight:400;
+    color:var(--wine);
+    margin:0 0 16px;
+}
+
+.project-p{
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    color:#1f1f1f;
+    margin:0;
+}
+
+.project-list{
+    margin:0;
+    padding-left:18px;
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    color:#1f1f1f;
+}
+
+.project-tools{
+    display:flex;
+    gap:26px;
+    align-items:center;
+}
+
+.project-tools img{
+    width:200px;
+    height:auto;
+    display:block;
+}
+
+@media (max-width: 900px){
+    .project-top{ flex-direction:column; }
+    .project-grid{ grid-template-columns:1fr; gap:50px; }
+}
+
+.case-block{
+    background:var(--bg);
+    padding:90px 0 120px;
+}
+
+
+.case-header{
+    max-width:1200px;
+    margin:0 auto 16px;
+    padding:0 10%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.case-title{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:54px;
+    font-weight:400;
+    color:var(--wine);
+    margin:0;
+}
+
+.case-badges{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.case-badge{
+    font-family:"Jost", sans-serif;
+    font-size:14px;
+    padding:6px 14px;
+    border-radius:999px;
+    border:1px solid var(--wine);
+    color:var(--wine);
+    background:transparent;
+    line-height:1;
+}
+
+.case-badge--filled{
+    background:var(--wine);
+    color:var(--bg);
+}
+
+.case-intro{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 10%;
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    text-align:center;
+    color:#1f1f1f;
+}
+
+
+.case-image:not(.case-image--mobile){
+    width:min(720px, 66vw);
+}
+
+.case-visuals{
+    width:100%;
+    margin:60px 0 90px;
+    padding-left:8%;
+    padding-right:0;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:120px;
+    overflow:visible;
+}
+
+.case-image{
+    display:block;
+    height:auto;
+}
+
+
+.case-content{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 10%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px 140px;
+    align-items:start;
+}
+
+.case-column{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.case-subtitle{
+    font-family:"Bavex","Times New Roman",serif;
+    font-size:32px;
+    font-weight:400;
+    color:var(--wine);
+    margin:0;
+}
+
+.case-text{
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    color:#1f1f1f;
+    margin:0;
+}
+
+.case-list{
+    margin:0;
+    padding-left:18px;
+    font-family:"Jost", sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    color:#1f1f1f;
+}
+
+.case-tools{
+    display:flex;
+    gap:26px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.case-tools img{
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 980px){
+    .case-visuals{
+        width:100%;
+        max-width:none;
+        margin:60px 0 90px;
+        padding:0;
+        display:flex;
+        align-items:flex-end;
+        justify-content:space-between;
+        gap:0;
+        overflow:visible;
+    }
+    .case-image:not(.case-image--mobile){
+        width:min(820px, 72vw);
+        height:auto;
+        display:block;
+        margin-left:10%;
+    }
+
+    .case-image--mobile{
+        width:min(520px, 45vw);
+        height:auto;
+        display:block;
+        margin-right:-2vw;
+        transform:none;
+    }
+    .case-content{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+}
